@@ -48,7 +48,7 @@ export function RecipeList({ recipes, isPending }: RecipeListProps) {
             <div className="mx-auto bg-secondary p-3 rounded-full">
                 <ChefHat className="h-10 w-10 text-muted-foreground" />
             </div>
-            <CardTitle className="mt-4 font-headline">Welcome to Fridge Genie</CardTitle>
+            <CardTitle className="mt-4 font-headline">Welcome to Your Chef</CardTitle>
         </CardHeader>
         <CardContent>
             <p className="text-muted-foreground">

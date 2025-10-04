@@ -40,7 +40,7 @@ export default function Home() {
       <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b bg-background/80 px-4 backdrop-blur-sm md:px-6">
         <div className="flex items-center gap-2 font-semibold">
           <ChefHat className="h-6 w-6 text-primary" />
-          <span className="text-xl font-headline">Fridge Genie</span>
+          <span className="text-xl font-headline">Your Chef</span>
         </div>
       </header>
       <main className="flex-1 p-4 md:p-6 lg:p-8">
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </main>
       <footer className="border-t py-4 text-center text-sm text-muted-foreground">
-        <p>Powered by AI. Cook responsibly.</p>
+        <p>© 2025 Your Chef - Developer By Priyanshu,<br/> All rights reserved.</p>
       </footer>
     </div>
   );
