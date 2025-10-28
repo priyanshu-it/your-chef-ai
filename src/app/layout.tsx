@@ -4,8 +4,11 @@ import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Your Chef',
+  title: 'Your Chef - AI',
   description: 'Generate recipes from ingredients you have at home.',
+  icons: {
+    icon: 'https://cdn-icons-png.flaticon.com/512/3242/3242261.png',
+  },
 };
 
 export default function RootLayout({
