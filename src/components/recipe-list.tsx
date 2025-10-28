@@ -61,7 +61,7 @@ export function RecipeList({ recipes, isPending }: RecipeListProps) {
 
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-headline font-bold">Your Recipe Suggestions</h2>
+      <h2 className="text-2xl font-headline font-bold">😋 Your Recipe Suggestions</h2>
       <div className="grid gap-6 md:grid-cols-1">
         {recipes.map((recipe, index) => (
           <RecipeCard key={`${recipe.name}-${index}`} recipe={recipe} />

@@ -31,11 +31,13 @@ export function IngredientForm({ onSubmit, isPending }: IngredientFormProps) {
   return (
     <Card className="w-full shadow-lg">
       <CardHeader>
-        <CardTitle className="font-headline text-2xl">Enter Your Ingredients</CardTitle>
-        <CardDescription>
-          List the ingredients you have, separated by commas. Let the genie work its magic!
-        </CardDescription>
+        <CardTitle>@ Enter Your Ingredients</CardTitle>
       </CardHeader>
+      
+      <p className='pt-0 pb-0 p-6 m-0' >
+        There are many AI-powered websites and apps that can suggest recipes
+      </p>
+
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -47,7 +49,7 @@ export function IngredientForm({ onSubmit, isPending }: IngredientFormProps) {
                   <FormLabel className="sr-only">Ingredients</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="e.g., chicken breast, tomatoes, garlic, olive oil"
+                      placeholder="List all ingredients you have (e.g.,maggi, rice, chicken, pasta)"
                       className="min-h-[100px] resize-none"
                       {...field}
                     />

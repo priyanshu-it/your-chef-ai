@@ -37,20 +37,41 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen w-full flex-col bg-background">
-      <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b bg-background/80 px-4 backdrop-blur-sm md:px-6">
+      {/* Header */}
+      <header className="fixed top-0 left-0 w-full bg-background z-50 flex flex-col items-center p-4">
         <div className="flex items-center gap-2 font-semibold">
-          <ChefHat className="h-6 w-6 text-primary" />
-          <span className="text-xl font-headline">Your Chef</span>
+          <ChefHat className="h-9 w-9 text-primary" />
+          <span className="text-4xl font-headline">Your Chef</span>
         </div>
+        <p className="max-w-md text-center mt-2">
+          Users can input a list of available ingredients to receive recipe suggestions instantly.
+        </p>
+        <div className="w-full h-1.5 bg-green-500 m-4 rounded-full" />
       </header>
-      <main className="flex-1 p-4 md:p-6 lg:p-8">
-        <div className="mx-auto grid max-w-4xl gap-8">
-          <IngredientForm onSubmit={onSubmit} isPending={isPending} />
-          <RecipeList recipes={recipes} isPending={isPending} />
+
+      {/* Main Content */}
+      <main className="flex-1 pt-[10rem] md:pt-[10rem] px-4 md:px-4 lg:px-4">
+        <div className="mx-auto max-w-full flex flex-col md:flex-row relative">
+
+          {/* Left Column - Sidebar */}
+          <aside className="w-full md:w-1/3 md:fixed md:top-[9.5rem] md:left-0 md:h-[calc(100vh-9.5rem)] md:z-40 md:overflow-y-auto bg-background p-4">
+            <IngredientForm onSubmit={onSubmit} isPending={isPending} />
+          </aside>
+
+          {/* Right Column - Main Content */}
+          <section className="w-full md:ml-[33.3333%] p-4 pb-32">
+            <RecipeList recipes={recipes} isPending={isPending} />
+          </section>
         </div>
       </main>
-      <footer className="border-t py-4 text-center text-sm text-muted-foreground">
-        <p>© 2025 Your Chef - Developer By Priyanshu,<br/> All rights reserved.</p>
+
+      {/* Fixed Footer */}
+      <footer className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-4 text-center text-sm text-muted-foreground shadow z-50">
+        <p>
+          © 2025 <span className="font-semibold text-primary">Your Chef</span> — Developed by Priyanshu.
+          <br />
+          All rights reserved.
+        </p>
       </footer>
     </div>
   );
